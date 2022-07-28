@@ -1,0 +1,12 @@
+.post-container{
+    margin:50px 30px;
+}
+.title{
+    color:rgb(23, 120, 240);
+    padding-bottom: 15px;
+    border-bottom: 1px rgba(190, 190, 190, 0.545) solid;
+}
+.body{
+    margin: 0 30px 30px 30px;
+    line-height: 30px;
+}
