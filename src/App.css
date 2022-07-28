@@ -51,9 +51,21 @@
 .comment-name{
   font-weight: bold;
 }
+.likebtn{
+  border: 1px solid darkgray;
+  border-radius: 0.5vh;
+  background-color: white;
+}
+.on{
+  color: red;
+}
 .inline{
   display: flex;
 }
 .left{
   text-align: left;
+}
+.flex-between{
+  display: flex;
+  justify-content: space-between;
 }
