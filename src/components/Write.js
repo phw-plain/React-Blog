@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import { Button } from 'react-bootstrap';
 import "./Write.css";
-import data from "../data/data.json";
 
 const Write = (props) => {
 
@@ -24,11 +23,11 @@ const Write = (props) => {
         else
         {
             const newData = {
-                id: data.length+1,
+                id: props.data.length+1,
                 title: title,
                 body: content,
             }
-            data.push(newData)
+            props.data.push(newData)
             alert('작성 완료!')
 
             // 화면 초기화

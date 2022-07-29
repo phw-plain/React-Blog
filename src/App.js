@@ -8,6 +8,7 @@ import Navigation from './components/Navigation'
 import Write from './components/Write';
 
 import comments from "./data/comments.json";
+import data from './data/data.json'
 
 import './App.css';
 
@@ -18,9 +19,9 @@ function App() {
         <Navigation />
         <Routes> 
             <Route path='/' element={<Main />}></Route>
-            <Route path='/list' element={<List />}></Route>
+            <Route path='/list' element={<List data={data} />}></Route>
             <Route path='/list/:id' element={<ListDetail comments={comments}/>}></Route>
-            <Route path='/write' element={<Write />}></Route>
+            <Route path='/write' element={<Write data={data}/>}></Route>
         </Routes>
       </Router>
     </div>
