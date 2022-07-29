@@ -25,7 +25,7 @@ const InputComment = (props) => {
             const Data = {
                 id: Number(props.id),
                 name: username,
-                content: input,
+                body: input,
                 like: 0
             }
             props.Comments.push(Data)
