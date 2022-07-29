@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import comments from '../data/comments.json'
-
+import React, { useEffect, useState } from 'react';
 const CommentsView = (props) => {
-    const [comment, setComment] = useState(comments);
+    const [comment, setComment] = useState(props.Comments);
 
     const countLikt = (idx) => {
         if(document.body.querySelector(`#like${idx}`).classList[1] !== 'on'){
@@ -26,6 +23,14 @@ const CommentsView = (props) => {
             })
         }
     }
+
+    useEffect(() => {
+        console.log('값 변경 됨!!')
+        setComment(props.Comments)
+    }, [props.Comments]);
+
+
+    console.log(comment)
 
     return(
         <div id="commentsview">
