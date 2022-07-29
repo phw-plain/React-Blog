@@ -14,7 +14,7 @@ const Navigation = () => {
                     </Navbar.Brand>
                     <Nav className="me-auto">
                         <Link to="/list" className="gray">list</Link>
-                        <Link to="/written" className="gray">written</Link>
+                        <Link to="/write" className="gray">write</Link>
                     </Nav>
                 </Container>
             </Navbar>

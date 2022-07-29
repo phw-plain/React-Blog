@@ -18,7 +18,7 @@ function App() {
             <Route path='/' element={<Main />}></Route>
             <Route path='/list' element={<List />}></Route>
             <Route path='/list/:id' element={<ListDetail />}></Route>
-            <Route path='/Write' element={<Write />}></Route>
+            <Route path='/write' element={<Write />}></Route>
         </Routes>
       </Router>
     </div>
