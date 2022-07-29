@@ -39,8 +39,11 @@
 
 /* CommentsView */
 #commentsview{
-  padding: 0vh 5vh 4vh 5vh;
-  margin: 0vh 10vh 0vh 10vh;
+  display: inline-block;
+  width: 80%;
+  max-width: 1000px;
+  padding: 0vh 5% 4vh 5%;
+  margin: 0vh 10% 0vh 10%;
   border: 1px solid lightgray;
 }
 .comment{
