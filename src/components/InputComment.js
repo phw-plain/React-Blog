@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import "./InputComment.css";
-import Comments from "./comments.json";
 
-const InputComment2 = () => {
+import CommentsView from './CommentsView'
 
+const InputComment = (props) => {
     const [username, setUsername] = useState("");
     const [input, setInput] = useState("");
-    const [comments, setComments] = useState(Comments);
 
     const onChangeBody = (e) => {
         setInput(e.target.value);
@@ -14,7 +13,6 @@ const InputComment2 = () => {
     const onChangeName = (e) => {
         setUsername(e.target.value);
     }
-
 
     const addComment = () => {
         if (username.length === 0) {
@@ -24,38 +22,34 @@ const InputComment2 = () => {
             alert("내용이 없습니다.");
         }
         else {
-            console.log(input + " " + username);
-            const newComments = [...comments]
-
-            // console.log(comments)
             const Data = {
-                id: 1,
-                content: input,
+                id: Number(props.id),
                 name: username,
+                content: input,
                 like: 0
             }
-            newComments.push(Data);
-            setComments(newComments)
+            props.Comments.push(Data)
 
-            console.log(newComments)
-            console.log(comments)
+            // clear
+            document.body.querySelector('.Input_name').value = ''
+            document.body.querySelector('.Input_content').value = ''
+            setInput("");
+            setUsername("");
         }
-        setInput("");
-        setUsername("");
     }
 
-
     return (
-        <div class='Input_Container'>
-            <input class='Input_name' type="text" name='name' placeholder='김하나' onChange={onChangeName}></input><br />
-            <input class='Input_content' type="text" name='content' placeholder='내용을 입력하세요' onChange={onChangeBody}></input><br />
-            <button class='Input_subBtn' type='submit' onClick={addComment}>작성</button>
-            <hr></hr>
-
+        <div>
+            <div className='Input_Container'>
+                <input className='Input_name' type="text" name='name' placeholder='이름' onChange={onChangeName}/><br />
+                <input className='Input_content' type="text" name='content' placeholder='내용을 입력하세요' onChange={onChangeBody}/><br />
+                <button className='Input_subBtn' type='submit' onClick={addComment}>작성</button>
+                <hr/>
+            </div>
+            <CommentsView id={props.id} Comments={props.Comments} />
         </div>
     )
 
-
 }
 
-export default InputComment2;
+export default InputComment;

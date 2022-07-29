@@ -50,6 +50,7 @@ html, body, #root, .App{
   padding: 0vh 5% 4vh 5%;
   margin: 0vh 10% 0vh 10%;
   border: 1px solid lightgray;
+  background-color: white;
 }
 .comment{
   padding-top: 3vh;
@@ -66,6 +67,7 @@ html, body, #root, .App{
 }
 .on{
   color: red;
+  background-color: rgb(249, 221, 236);
 }
 .inline{
   display: flex;

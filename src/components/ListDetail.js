@@ -1,9 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+
 import dummy from "../data/data.json";
+import Comments from "../data/comments.json";
+
 import './ListDetail.css';
 
-import CommentsView from './CommentsView'
+import InputComment from './InputComment'
 
 const ListDetail = () => {
     const { id } = useParams();
@@ -15,7 +18,7 @@ const ListDetail = () => {
         <div className='post-container'>
             <h1 className='title'>{post[0].title}</h1>
             <p className='body'>{post[0].body}</p>
-            <CommentsView id={id} />
+            <InputComment id={id} Comments={Comments}/>
         </div>
     );
 
