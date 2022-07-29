@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import "./List.css";
 
 const todos = [{
     "id": 1,
@@ -75,16 +77,15 @@ const todos = [{
     "title": "eveniet quod temporibus",
     "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
 }]
-let a = JSON.parse(JSON.stringify(todos));
-console.log(a)
+let jsonParse = JSON.parse(JSON.stringify(todos));
 
 class List extends Component {
     state = {
-        data: a
+        data: jsonParse
     }
     render() {
         const content = this.state.data.map((list) => (
-            <tr><td>{list.id}</td><td>{list.title}</td><td>hello</td></tr>
+            <tr><td>{list.id}</td><td><Link to ={"/ListDetail/"+list.id}>{list.title}</Link></td><td>hello</td></tr>
         ))
         const styles={
             width :"80%",
