@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+/* CommentsView */
+#commentsview{
+  padding: 0vh 5vh 4vh 5vh;
+  margin: 0vh 10vh 0vh 10vh;
+  border: 1px solid lightgray;
+}
+.comment{
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+  border-bottom: 1px solid lightgray;
+}
+.comment-name{
+  font-weight: bold;
+}
+.likebtn{
+  border: 1px solid darkgray;
+  border-radius: 0.5vh;
+  background-color: white;
+}
+.on{
+  color: red;
+}
+.inline{
+  display: flex;
+}
+.left{
+  text-align: left;
+}
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+}
