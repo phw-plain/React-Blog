@@ -15,6 +15,15 @@ const CommentsView = (props) => {
                     document.body.querySelector(`#like${idx}`).classList.add('on')
                 }
             })
+        } else {
+            const newComment = [...comment];
+            newComment.map((item, index) =>  {
+                if(item.id === Number(props.id) && idx === index) {
+                    newComment[index].like--;
+                    setComment(newComment)
+                    document.body.querySelector(`#like${idx}`).classList.remove('on')
+                }
+            })
         }
     }
 
