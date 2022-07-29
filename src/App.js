@@ -5,6 +5,7 @@ import List from './components/List'
 import ListDetail from './components/ListDetail'
 import Main from './components/Main'
 import Navigation from './components/Navigation'
+import Write from './components/Write';
 
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
             <Route path='/' element={<Main />}></Route>
             <Route path='/list' element={<List />}></Route>
             <Route path='/list/:id' element={<ListDetail />}></Route>
+            <Route path='/Write' element={<Write />}></Route>
         </Routes>
       </Router>
     </div>
