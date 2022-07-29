@@ -1,3 +1,8 @@
+html, body, #root, .App{
+  height: 100%;
+  background-color: rgb(222, 219, 219);
+}
+
 .App {
   text-align: center;
 }
@@ -74,6 +79,12 @@
 }
 
 /* Navigarion */
+.white{
+  color: white;
+}
+.white:hover {
+  color: lightgray;
+}
 .gray{
   color: lightgray;
   margin-right: 1vh;
@@ -83,4 +94,11 @@
 }
 a{
   text-decoration: none !important;
+}
+
+/* Main */
+#main{
+  width: 100%;
+  padding: 30% 5vh 5vh 5vh;
+  text-align: right;
 }
