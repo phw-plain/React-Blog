@@ -16,7 +16,7 @@ const InputComment = (props) => {
 
     const addComment = () => {
         if (username.length === 0) {
-            alert("내용이 없습니다.");
+            alert("이름이 없습니다.");
         }
         else if (input.length === 0) {
             alert("내용이 없습니다.");
