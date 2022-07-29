@@ -85,7 +85,7 @@ class List extends Component {
     }
     render() {
         const content = this.state.data.map((list) => (
-            <tr><td>{list.id}</td><td><Link to ={"/ListDetail/"+list.id}>{list.title}</Link></td><td>hello</td></tr>
+            <tr><td>{list.id}</td><td><Link to ={"/list/"+list.id}>{list.title}</Link></td><td>hello</td></tr>
         ))
         const styles={
             width :"80%",
