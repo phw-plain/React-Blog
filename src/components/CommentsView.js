@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 const CommentsView = (props) => {
     const [comment, setComment] = useState(props.Comments);
 
@@ -24,17 +24,9 @@ const CommentsView = (props) => {
         }
     }
 
-    useEffect(() => {
-        console.log('값 변경 됨!!')
-        setComment(props.Comments)
-    }, [props.Comments]);
-
-
-    console.log(comment)
-
     return(
         <div id="commentsview">
-            {
+            { comment.filter((item => item.id === Number(props.id))).length !== 0 ? 
                 comment.map((item, idx) => 
                     (item.id === Number(props.id)) ? 
                         <div className='comment' key={idx}>
@@ -48,7 +40,7 @@ const CommentsView = (props) => {
                             </div>
                         </div> 
                          : null
-                )
+                ) : <div><br/><br/>댓글이 없습니다.</div>
             }
         </div>
     )
