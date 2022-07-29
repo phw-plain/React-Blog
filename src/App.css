@@ -69,3 +69,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+/* Navigarion */
+.gray{
+  color: lightgray;
+  margin-right: 1vh;
+}
+.gray:hover {
+  color: gray;
+}
+a{
+  text-decoration: none !important;
+}
