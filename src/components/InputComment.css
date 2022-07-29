@@ -1,0 +1,48 @@
+.Input_Container {
+    margin: 50px 300px;
+}
+
+.input-form {}
+
+.Input_name {
+    margin-bottom: 10px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgba(97, 97, 97, 0.479);
+    background-color: rgb(249, 252, 255);
+    border-radius: 3px;
+}
+
+.input-name-box {
+    /* text-align: end; */
+}
+
+.Input_content {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(97, 97, 97, 0.479);
+    background-color: rgb(249, 252, 255);
+    border-radius: 3px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.Input_subBtn {
+    height: 40px;
+    width: 100px;
+    float: right;
+    background-color: rgb(124, 172, 220);
+    border: none;
+    color: white;
+    border-radius: 7px;
+
+}
+
+.Input_subBtn:hover {
+    cursor: pointer;
+    background-color: rgb(91, 139, 188);
+}
