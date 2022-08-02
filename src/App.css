@@ -104,3 +104,8 @@ a{
   padding: 30% 5vh 5vh 5vh;
   text-align: right;
 }
+
+/* List */
+.black {
+  color: black;
+}
